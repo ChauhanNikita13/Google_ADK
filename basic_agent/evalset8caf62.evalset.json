@@ -1,0 +1,103 @@
+{
+  "eval_set_id": "evalset8caf62",
+  "name": "evalset8caf62",
+  "description": null,
+  "eval_cases": [
+    {
+      "eval_id": "casefbdce2",
+      "conversation": [
+        {
+          "invocation_id": "e-eaff4b61-6bd6-4246-8124-bbcbcb1cfd7c",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "function_call": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_response": null,
+                "text": "Hi"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "function_call": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_response": null,
+                "text": "Hello there! I'm ready to assist you. I can check if a number is even and tell you the length of a name. How can I help you today?\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 1760433902.6657
+        },
+        {
+          "invocation_id": "e-dff69cb8-17d4-433f-91b2-ce7f2ca4877a",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "function_call": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_response": null,
+                "text": "what is length of apoorva"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "function_call": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_response": null,
+                "text": "The length of the name \"apoorva\" is 7.\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 1760433923.616362
+        }
+      ],
+      "session_input": {
+        "app_name": "basic_agent",
+        "user_id": "user",
+        "state": {}
+      },
+      "creation_timestamp": 1760433937.0941272
+    }
+  ],
+  "creation_timestamp": 1760433933.7115157
+}
