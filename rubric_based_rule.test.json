@@ -1,0 +1,31 @@
+{
+  "eval_set_id": "basic_agent_rubric_tool_use",
+  "name": "Rubric-based Tool Use Quality",
+  "description": "Evaluate agent's tool use using rubrics",
+  "criteria": {
+    "rubric_based_tool_use_quality_v1": {
+      "threshold": 1.0,
+      "judge_model_options": { "judge_model": "gemini-2.5-flash", "num_samples": 5 },
+      "rubrics": [
+        { "rubric_id": "check_even_called", "rubric_content": { "text_property": "The agent calls the check_even tool correctly." } }
+      ]
+    }
+  },
+  "eval_cases": [
+    {
+      "eval_id": "even_number_test",
+      "conversation": [
+        {
+          "invocation_id": "22222222-2222-2222-2222-222222222222",
+          "user_content": { "parts": [{"text": "Is 8 even or odd?"}], "role": "user" },
+          "final_response": { "parts": [{"text": "8 is an even number."}], "role": "model" },
+          "intermediate_data": {
+            "tool_uses": [ { "name": "check_even", "args": {"number": 8} } ],
+            "intermediate_responses": []
+          }
+        }
+      ],
+      "session_input": { "app_name": "basic_agent", "user_id": "test_user", "state": {} }
+    }
+  ]
+}

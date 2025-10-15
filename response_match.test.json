@@ -1,0 +1,22 @@
+{
+  "eval_set_id": "basic_agent_response_match",
+  "name": "Basic Agent Response Match Test",
+  "description": "Exact lexical match of responses",
+  "criteria": {
+    "response_match_score": 0.8
+  },
+  "eval_cases": [
+    {
+      "eval_id": "even_number_test",
+      "conversation": [
+        {
+          "invocation_id": "22222222-2222-2222-2222-222222222222",
+          "user_content": { "parts": [{"text": "Is 8 even or odd?"}], "role": "user" },
+          "final_response": { "parts": [{"text": "8 is an even number."}], "role": "model" },
+          "intermediate_data": { "tool_uses": [], "intermediate_responses": [] }
+        }
+      ],
+      "session_input": { "app_name": "basic_agent", "user_id": "test_user", "state": {} }
+    }
+  ]
+}

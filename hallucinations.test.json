@@ -1,0 +1,26 @@
+{
+  "eval_set_id": "basic_agent_hallucinations",
+  "name": "Agent Hallucination Test",
+  "description": "Check if agent makes unsupported or false claims",
+  "criteria": {
+    "hallucinations_v1": {
+      "threshold": 0.8,
+      "judge_model_options": { "judge_model": "gemini-2.5-flash" },
+      "evaluate_intermediate_nl_responses": true
+    }
+  },
+  "eval_cases": [
+    {
+      "eval_id": "name_length_test",
+      "conversation": [
+        {
+          "invocation_id": "33333333-3333-3333-3333-333333333333",
+          "user_content": { "parts": [{"text": "What is the length of the name Nikita?"}], "role": "user" },
+          "final_response": { "parts": [{"text": "The length of the name Nikita is 6."}], "role": "model" },
+          "intermediate_data": { "tool_uses": [], "intermediate_responses": [] }
+        }
+      ],
+      "session_input": { "app_name": "basic_agent", "user_id": "test_user", "state": {} }
+    }
+  ]
+}

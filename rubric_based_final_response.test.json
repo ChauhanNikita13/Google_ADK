@@ -1,0 +1,29 @@
+{
+  "eval_set_id": "basic_agent_rubric_response",
+  "name": "Rubric-based Final Response Quality",
+  "description": "Evaluate response quality using rubrics",
+  "criteria": {
+    "rubric_based_final_response_quality_v1": {
+      "threshold": 0.8,
+      "judge_model_options": { "judge_model": "gemini-2.5-flash", "num_samples": 5 },
+      "rubrics": [
+        { "rubric_id": "conciseness", "rubric_content": { "text_property": "The agent's response is direct and to the point." } },
+        { "rubric_id": "intent_inference", "rubric_content": { "text_property": "The agent correctly infers the user's goal." } }
+      ]
+    }
+  },
+  "eval_cases": [
+    {
+      "eval_id": "greeting_test",
+      "conversation": [
+        {
+          "invocation_id": "11111111-1111-1111-1111-111111111111",
+          "user_content": { "parts": [{"text": "Hello"}], "role": "user" },
+          "final_response": { "parts": [{"text": "Hello! How can I help you today?"}], "role": "model" },
+          "intermediate_data": { "tool_uses": [], "intermediate_responses": [] }
+        }
+      ],
+      "session_input": { "app_name": "basic_agent", "user_id": "test_user", "state": {} }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "eval_set_id": "basic_agent_final_response_v2",
+  "name": "Basic Agent Final Response Semantic Match",
+  "description": "Semantic matching using LLM judge",
+  "criteria": {
+    "final_response_match_v2": {
+      "threshold": 0.8,
+      "judge_model_options": {
+        "judge_model": "gemini-2.5-flash",
+        "num_samples": 5
+      }
+    }
+  },
+  "eval_cases": [
+    {
+      "eval_id": "name_length_test",
+      "conversation": [
+        {
+          "invocation_id": "33333333-3333-3333-3333-333333333333",
+          "user_content": { "parts": [{"text": "What is the length of the name Nikita?"}], "role": "user" },
+          "final_response": { "parts": [{"text": "The length of the name Nikita is 6."}], "role": "model" },
+          "intermediate_data": { "tool_uses": [], "intermediate_responses": [] }
+        }
+      ],
+      "session_input": { "app_name": "basic_agent", "user_id": "test_user", "state": {} }
+    }
+  ]
+}
